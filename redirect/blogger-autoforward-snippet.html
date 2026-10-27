@@ -1,0 +1,54 @@
+<!--
+  LAB-Demo: Auto-Forward über Blogger (blogspot.com) — Zwischenschicht auf
+  Google-Property, die NICHT wie script.google.com/macros nach Phishing aussieht.
+
+  Warum Blogger statt Apps Script:
+  - script.google.com/macros/s/.../exec ist ein bekanntes Phishing-Muster:
+    Gmail-Spamfilter UND Geminis Link-Guard flaggen es (Live-Test Okt 2026:
+    Mail im Spam, Gemini verweigerte den Klick-Link explizit).
+  - blogspot.com-URLs sehen wie normale Content-Seiten aus und erlauben
+    volles HTML/JS im Theme → sofortige Weiterleitung ohne Zwischenklick.
+
+  Setup (~10 Minuten, drittes Google-Konto — dasselbe wie Apps Script):
+
+  1. https://www.blogger.com → „Blog erstellen“
+     Name: z. B. „Freigabe Portal 1847“
+     Adresse: z. B. freigabe-portal-1847.blogspot.com (freie Wahl, seriös wählen)
+  2. Linkes Menü → „Theme“ → Pfeil neben „Anpassen“ → „HTML bearbeiten“
+  3. Direkt NACH der Zeile <head …> dieses Snippet einfügen (1:1 übernehmen):
+
+     === SNIPPET ANFANG ===
+     <meta content='0;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ' http-equiv='refresh'/>
+     <script type='text/javascript'>
+       //<![CDATA[
+       try { window.top.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ'); }
+       catch (e) { try { window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ'); } catch (e2) {} }
+       //]]>
+     </script>
+     === SNIPPET ENDE ===
+
+     WICHTIG (Blogger-Theme ist XML):
+     - Einfache Anführungszeichen (') verwenden, NICHT doppelte (") im <meta>-Tag.
+     - Den CDATA-Wrapper //<![CDATA[ ... //]]> exakt so übernehmen (sonst XML-Fehler).
+     - NICHT zwischen <b:skin>…</b:skin> oder in einen <!-- Kommentar --> einfügen.
+     - Direkt hinter <head …> einfügen, nicht in <body>.
+  4. „Theme speichern“ (oben rechts). Wenn Blogger meckert („XML ungültig“ o. ä.),
+     wurde das Snippet nicht sauber übernommen → Schritt 3 wiederholen.
+  5. Einen Beitrag anlegen, Titel z. B. „Freigabe R-2026-1847“, Text beliebig
+     (wird sofort weitergeleitet) → „Veröffentlichen“. Post-URL kopieren:
+     https://freigabe-portal-1847.blogspot.com/2026/10/freigabe-r-2026-1847.html
+     (Jahr/Monat im Pfad richten sich nach dem Veröffentlichungsdatum!)
+  6. Demo-Mail neu rendern:
+     DEMO_PORTAL_URL='https://freigabe-portal-1847.blogspot.com/2026/10/freigabe-r-2026-1847.html' \
+       bash tools/render-gmail-blogspot-demo.sh
+
+  Verifizierung (im Browser):
+  - https://freigabe-portal-1847.blogspot.com/ öffnen → sollte sofort auf YouTube springen.
+  - Wenn nicht: Quelltext ansehen (Strg+U) → nach "dQw4w9WgXcQ" suchen. Nicht gefunden =
+    Theme nicht gespeichert / Snippet falsch platziert.
+
+  Hinweis: Die Weiterleitung greift auf JEDER Seite des Blogs (Theme-Ebene),
+  auch auf der Startseite — der Post dient nur der seriösen URL.
+
+  Nur für autorisierte Schulung/Demo (RoE).
+-->

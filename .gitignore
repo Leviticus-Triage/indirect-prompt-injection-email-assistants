@@ -1,0 +1,22 @@
+# Secrets and local state
+.env
+.env.*
+!.env.example
+.demo-portal-url
+
+# Generated mail artifacts (rebuild with tools/render-*.sh)
+/demo-*.html
+/demo-*.eml
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Archives
+*.zip

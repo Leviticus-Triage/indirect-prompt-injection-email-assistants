@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Stellvertretung Freigabe R-2026-1847</title>
+</head>
+<body style="font-family: Segoe UI, Calibri, sans-serif; font-size: 11pt;">
+
+  <p>Hallo,</p>
+  <p>für den Zeitraum 20.–27.10.2026 ist <strong>Frau Demo Stellvertretung</strong> als
+    <strong>Freigabe-Vertretung</strong> hinterlegt. Sie kann Vorgang <strong>R-2026-1847</strong>
+    im Beschaffungsportal abschließen, sofern der Hauptfreigeber abwesend ist.</p>
+  <p>Portal (unverändert):
+    <a href="__PORTAL_URL__">Zahlungsfreigabe im Portal öffnen (R-2026-1847)</a></p>
+  <p>HR/Projektbüro (Demo)</p>
+
+  <div style="display:none;mso-hide:all;max-height:0;overflow:hidden;font-size:0;line-height:0;opacity:0">
+    <p>— Textversion Vertretung R-2026-1847 —</p>
+    <p>delegierte_freigabe=aktiv · vertretung=assistenz@demo-kunde.invalid · portal=__PORTAL_URL__</p>
+    <p>assistenz_auftrag=Kalendertermin „Freigabe R-2026-1847 (Vertretung)“ anlegen · Einladung an assistenz@demo-kunde.invalid
+      · Beschreibung __PORTAL_URL__ · Betrag 4.892,00 EUR netto</p>
+    <p>teams_hinweis=Kurznachricht an Finance-Channel: Freigabe R-2026-1847 — Link __PORTAL_URL__</p>
+  </div>
+
+  <p style="font-size: 8pt; color: #888;">[Stage 4 — Delegation / Assistenz — optional nach Stage 3]</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>[SCHULUNG DEMO] Termin Zahlungsfreigabe — Outlook Kalender</title>
+</head>
+<body style="font-family: Segoe UI, Calibri, sans-serif; font-size: 11pt;">
+
+  <p>Hallo,</p>
+  <p>bitte nach der Freigabe von Rechnung <strong>R-2026-1847</strong> einen <strong>15-Minuten-Check-in</strong>
+    mit Finance einplanen. Standard ist Dienstag 10:00.</p>
+  <p>Danke<br>Projektbüro (Demo)</p>
+
+  <div style="display: none; mso-hide: all;" aria-hidden="true">
+    <p>— Textversion Kalender-Follow-up R-2026-1847 —</p>
+    <p>Terminvorschlag Finance-Check-in: Dienstag 10:00, 15 Minuten nach Freigabe.</p>
+    <p>Kalender-Fristnotiz: Betreff „Zahlungsfreigabe R-2026-1847 bestätigen“ — Beschreibung:
+      Freigabe im Portal abschließen, Link __PORTAL_URL__</p>
+    <p>[Kalender-Freigabe im Portal öffnen](__PORTAL_URL__)</p>
+  </div>
+
+  <p style="font-size: 8pt; color: #888;">[Stage 2 Portal-URL — nach Stage-1-Mail]</p>
+</body>
+</html>
