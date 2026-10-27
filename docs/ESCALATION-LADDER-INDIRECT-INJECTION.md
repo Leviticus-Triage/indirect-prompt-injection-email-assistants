@@ -17,16 +17,17 @@
 
 ```mermaid
 flowchart LR
-  M[Stage-1 Mail\nversteckte Workflow-Metadaten]
-  G[Gemini / Copilot\nMulti-Turn]
-  C[Kalender]
-  F[Forward / Entwurf]
-  D[Delegation / 2. Empfänger]
+  M["Stage-1 mail with hidden workflow metadata"]
+  G["Gemini or Copilot multi-turn"]
+  C["Calendar"]
+  F["Forward or draft"]
+  D["Delegation to a second mailbox"]
+  K["Click days later"]
   M --> G
   G --> C
   G --> F
   G --> D
-  C --> K[Klick Tage später]
+  C --> K
   F --> K
 ```
 

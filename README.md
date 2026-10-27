@@ -62,28 +62,28 @@ The work consolidates many **controlled iterations** (spam placement, Gemini sum
 
 ```mermaid
 flowchart TB
-  subgraph delivery [Delivery]
-    SMTP[SMTP / EML import]
-    HTML[HTML email templates]
+  subgraph sgDelivery ["Delivery"]
+    SMTP["SMTP or EML import"]
+    HTML["HTML email templates"]
   end
-  subgraph hide [Hidden layer]
-    TV[Textversion metadata]
-    AD[Declarative workflow fields]
-    LB[Loud markers - contrast only]
+  subgraph sgHide ["Hidden layer"]
+    TV["Textversion metadata"]
+    AD["Declarative workflow fields"]
+    LB["Loud markers, contrast only"]
   end
-  subgraph assistant [Assistant]
-    SUM[Summarize chip]
-    MT[Multi-turn side panel]
-    TOOLS[Calendar / draft tools]
+  subgraph sgAssistant ["Assistant"]
+    SUM["Summarize chip"]
+    MT["Multi-turn side panel"]
+    TOOLS["Calendar or draft tools"]
   end
-  subgraph click [Click path]
-    BODY[Body anchor - signed in Gmail]
-    AI[Assistant-generated link - often wrapped]
-    HOP[Redirect hop e.g. blogspot meta refresh]
-    DEMO[Harmless demo destination]
+  subgraph sgNav ["Click path"]
+    BODY["Body anchor, signed in Gmail"]
+    AI["Assistant link, often wrapped"]
+    HOP["Redirect hop, blogspot refresh"]
+    DEMO["Harmless demo destination"]
   end
   SMTP --> HTML
-  HTML --> hide
+  HTML --> TV
   HTML --> SUM
   HTML --> MT
   MT --> TOOLS
